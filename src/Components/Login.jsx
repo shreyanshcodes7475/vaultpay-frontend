@@ -16,8 +16,7 @@ const handleLogin=async(e)=>{
         Navigate("/");
     }
     catch(err){ 
-        setError(err.message);
-        console.log(err.message);
+        setError(err?.response?.data?.message);
     }
 }
 

@@ -26,6 +26,7 @@ const ProtectedRoute=({children})=>{
     if(loading){
         return <div>Loading...</div>
     }
+    
 
   if (!isAuth) {
     return <Navigate to="/login" replace />;

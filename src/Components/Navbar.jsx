@@ -26,9 +26,21 @@ const Navbar= ()=>{
           Vault<span className="text-blue-500">Pay</span>
         </h1>
 
-        {/* Profile */}
+
+
+      <div className="flex items-center ml-auto">
+                {/* Profile */}
+        
+          <div  className="display flex justify-end mx-5 ">
+          <Link to={"/dashboard"} className="text-white mx-2">Dashboard</Link>
+          <Link to={"/dashboard/wallet"} className="text-white mx-2">Wallet</Link>
+          <Link to={"/dashboard/add-money"}className="text-white mx-2">Add Money</Link>
+          <Link to={"/dashboard"}className="text-white mx-2">Transfer Money</Link>
+        </div>
         <div className="relative">
-          <div onClick={()=>setOpen(!open)}
+
+
+        <div onClick={()=>setOpen(!open)}
            className="avatar">
         <div
           className="
@@ -48,17 +60,10 @@ const Navbar= ()=>{
         </div>
           </div>
 
+
           {/* Dropdown */}
           {open && (
             <div className="absolute right-0 mt-3 w-40 bg-[#0f172a] rounded-lg shadow-lg overflow-hidden">
-              <Link
-                to="/"
-                className="block px-4 py-2 text-white hover:bg-[#1e2a45]"
-                onClick={() => setOpen(false)}
-              >
-                Dashboard
-              </Link>
-
               <button
                 onClick={handleLogout}
                 className="block w-full text-left px-4 py-2 text-white hover:bg-[#1e2a45]"
@@ -68,6 +73,7 @@ const Navbar= ()=>{
             </div>
           )}
         </div>
+      </div>
 
       </div>
     </div>

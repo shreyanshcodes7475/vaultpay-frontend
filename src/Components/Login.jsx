@@ -4,8 +4,8 @@ import { useNavigate} from "react-router-dom";
 import axios from "axios";
 const Login=()=>{
 
-const [email, setEmail]=useState("Prashant@gmail.com");
-const [password, setPassword]=useState("Prashant@123$");
+const [email, setEmail]=useState("Shreyansh@gmail.com");
+const [password, setPassword]=useState("Shre@123$");
 const [loading ,setLoading]=useState(false);
 const [error, setError]=useState("");
 const Navigate=useNavigate();
@@ -13,7 +13,7 @@ const Navigate=useNavigate();
 const handleLogin=async(e)=>{
     try{
         await axios.post(Base_url+"/auth/login",{email,password}, {withCredentials:true});
-        Navigate("/");
+        Navigate("/dashboard");
     }
     catch(err){ 
         setError(err?.response?.data?.message);

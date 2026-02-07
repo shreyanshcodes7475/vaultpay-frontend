@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 const NotFound=()=>{
   return (
     <div className="min-h-screen flex items-center justify-center bg-[#0f172a]">
@@ -13,7 +14,7 @@ const NotFound=()=>{
         </p>
 
         <Link
-          to="/"
+          to="/dashboard"
           className="inline-block mt-4 rounded-xl bg-blue-600 px-6 py-3 font-semibold hover:bg-blue-700 transition"
         >
           Go to Dashboard
